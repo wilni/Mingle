@@ -8,26 +8,22 @@
 
     <ScrollView
         android:layout_width="match_parent"
-        android:layout_height="match_parent">
+        android:layout_height="match_parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        tools:layout_editor_absoluteY="-155dp">
 
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:orientation="vertical">
-<!--            <Button-->
-<!--                android:id="@+id/myProfileBtn"-->
-<!--                android:layout_width="wrap_content"-->
-<!--                android:layout_height="wrap_content"-->
-<!--                android:layout_marginTop="16dp"-->
-<!--                android:text="See my profile"-->
-<!--                android:layout_gravity="center"/>-->
 
             <com.google.android.material.imageview.ShapeableImageView
                 android:id="@+id/profilePic"
                 android:layout_width="200dp"
                 android:layout_height="200dp"
-                android:layout_marginTop="32dp"
                 android:layout_gravity="center"
+                android:layout_marginTop="32dp"
                 android:padding="5dp"
                 android:src="@drawable/default_icon"
                 app:shapeAppearanceOverlay="@style/roundedImageViewRounded"
@@ -38,10 +34,12 @@
                 android:id="@+id/editName"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:layout_marginBottom="20dp"
+                android:background="@null"
+                android:fontFamily="@font/lato"
                 android:hint="Name"
                 android:textAlignment="center"
-                android:layout_marginBottom="20dp"
-                android:background="@null" />
+                android:textSize="24sp" />
 
             <EditText
                 android:id="@+id/editBio"
@@ -49,9 +47,11 @@
                 android:layout_height="114dp"
                 android:layout_marginBottom="20dp"
                 android:background="@null"
+                android:fontFamily="@font/lato"
                 android:hint="A little about yourself"
                 android:inputType="text"
-                android:textAlignment="center" />
+                android:textAlignment="center"
+                android:textSize="18sp" />
 
             <LinearLayout
                 android:layout_width="match_parent"
@@ -62,8 +62,8 @@
                     android:id="@+id/profileImg1"
                     android:layout_width="200dp"
                     android:layout_height="200dp"
-                    android:layout_marginTop="24dp"
                     android:layout_gravity="start"
+                    android:layout_marginTop="24dp"
                     android:padding="5dp"
                     android:src="@drawable/default_icon"
                     app:strokeColor="@color/black"
@@ -73,8 +73,8 @@
                     android:id="@+id/profileImg2"
                     android:layout_width="200dp"
                     android:layout_height="200dp"
-                    android:layout_marginTop="24dp"
                     android:layout_gravity="end"
+                    android:layout_marginTop="24dp"
                     android:padding="5dp"
                     android:src="@drawable/default_icon"
                     app:strokeColor="@color/black"
@@ -83,27 +83,27 @@
 
             <Button
                 android:id="@+id/editInfoBtn"
-                android:layout_width="wrap_content"
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginBottom="40dp"
                 android:layout_gravity="center"
-                android:text="Update" />
+                android:layout_marginBottom="40dp"
+                android:text="Update"
+                android:background="@drawable/button_bg"/>
 
             <Button
                 android:id="@+id/signOutBtn"
-                android:layout_width="wrap_content"
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginBottom="40dp"
                 android:layout_gravity="center"
+                android:layout_marginBottom="40dp"
+                android:text="Sign Out"
                 android:textAlignment="center"
-                android:text="Sign Out" />
+                android:background="@drawable/button_bg"/>
 
 
         </LinearLayout>
 
     </ScrollView>
-
-
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

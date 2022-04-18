@@ -42,6 +42,8 @@ tools:context=".SettingsActivity">
             android:layout_height="wrap_content"
             android:hint="Name"
             android:textAlignment="center"
+            android:fontFamily="@font/lato"
+            android:textSize="32sp"
             android:layout_marginBottom="20dp" />
 
         <TextView
@@ -50,6 +52,8 @@ tools:context=".SettingsActivity">
             android:layout_height="114dp"
             android:layout_marginBottom="20dp"
             android:inputType="text"
+            android:textSize="18dp"
+            android:fontFamily="@font/lato"
             android:textAlignment="center" />
 
         <LinearLayout

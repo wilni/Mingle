@@ -39,7 +39,8 @@
         <RadioButton
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Non-Binary" />
+            android:text="Non-Binary"
+            android:visibility="invisible"/>
     </RadioGroup>
 
     <EditText
@@ -72,6 +73,7 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="84dp"
         android:text="Register"
+        android:background="@drawable/button_bg"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toStartOf="parent"

@@ -22,6 +22,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:fontFamily="@font/lato"
+            android:textStyle="bold"
             android:paddingBottom="20sp"
             android:text="Match's Name"
             android:textSize="40sp" />
