@@ -13,6 +13,7 @@ import android.widget.Button;
 import android.widget.ListView;
 import android.widget.Toast;
 
+import com.example.mingle.chat.ChatActivity;
 import com.example.mingle.matches.MatchesActivity;
 import com.google.android.material.bottomnavigation.BottomNavigationView;
 import com.google.android.material.navigation.NavigationBarView;
@@ -42,9 +43,10 @@ public class MainActivity extends AppCompatActivity {
 
 
     //string to hold user ID
-    private String currentUId;
+    private String currentUId, matchId;
     private DatabaseReference usersDb;
 
+    //array with card object
     private ListView listView;
     private List<Cards> rowItems;
 
@@ -81,15 +83,15 @@ public class MainActivity extends AppCompatActivity {
                 Cards obj = (Cards) dataObject;
                 String userId = obj.getUserID();
                 usersDb.child(userId).child("Connections").child("no").child(currentUId).setValue(true);
-                Toast.makeText(MainActivity.this, "Left Swipe",Toast.LENGTH_SHORT).show();
+                Toast.makeText(MainActivity.this, "Not",Toast.LENGTH_SHORT).show();
             }
             @Override
             public void onRightCardExit(Object dataObject) {
                 Cards obj = (Cards) dataObject;
-                String userId = obj.getUserID();
-                usersDb.child(userId).child("Connections").child("yes").child(currentUId).setValue(true);
-                isAMatch(userId);
-                Toast.makeText(MainActivity.this, "Right Swipe",Toast.LENGTH_SHORT).show();
+                matchId = obj.getUserID();
+                usersDb.child(matchId).child("Connections").child("yes").child(currentUId).setValue(true);
+                isAMatch(matchId);
+                Toast.makeText(MainActivity.this, "Hot",Toast.LENGTH_SHORT).show();
             }
             @Override
             public void onAdapterAboutToEmpty(int itemsInAdapter) {
@@ -104,7 +106,11 @@ public class MainActivity extends AppCompatActivity {
         flingContainer.setOnItemClickListener(new SwipeFlingAdapterView.OnItemClickListener() {
             @Override
             public void onItemClicked(int itemPosition, Object dataObject) {
-                Toast.makeText(MainActivity.this, "Clicked!",Toast.LENGTH_SHORT).show();
+                Cards obj = (Cards) dataObject;
+                matchId = obj.getUserID();
+                Intent intent = new Intent(MainActivity.this, ProfileActivity.class);
+                intent.putExtra("matchId", matchId);
+                startActivity(intent);
             }
         });
 

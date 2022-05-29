@@ -13,6 +13,7 @@
         android:layout_marginTop="48dp"
         android:hint="Name"
         android:textAlignment="center"
+        android:textSize="18sp"
         android:inputType="text"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
@@ -31,11 +32,13 @@
         <RadioButton
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Male" />
+            android:text="Male"
+            android:textSize="18sp"/>
         <RadioButton
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Female" />
+            android:text="Female"
+            android:textSize="18sp"/>
         <RadioButton
             android:layout_width="match_parent"
             android:layout_height="wrap_content"

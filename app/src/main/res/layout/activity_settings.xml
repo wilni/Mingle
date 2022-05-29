@@ -56,13 +56,13 @@
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:orientation="horizontal">
+                android:orientation="vertical">
 
                 <com.google.android.material.imageview.ShapeableImageView
                     android:id="@+id/profileImg1"
-                    android:layout_width="200dp"
-                    android:layout_height="200dp"
-                    android:layout_gravity="start"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
                     android:layout_marginTop="24dp"
                     android:padding="5dp"
                     android:src="@drawable/default_icon"
@@ -71,9 +71,9 @@
 
                 <com.google.android.material.imageview.ShapeableImageView
                     android:id="@+id/profileImg2"
-                    android:layout_width="200dp"
-                    android:layout_height="200dp"
-                    android:layout_gravity="end"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
                     android:layout_marginTop="24dp"
                     android:padding="5dp"
                     android:src="@drawable/default_icon"

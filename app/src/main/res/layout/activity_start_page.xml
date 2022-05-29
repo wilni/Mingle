@@ -5,14 +5,16 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".StartActivity"
-    android:background="@drawable/mingleStartBg">
+    android:background="@drawable/mingle_start_bg">
 
     <Button
         android:id="@+id/register"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginBottom="108dp"
+        android:textSize="18sp"
         android:text="Register"
+        android:background="@drawable/button_bg"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
@@ -24,6 +26,8 @@
         android:layout_height="wrap_content"
         android:layout_marginBottom="4dp"
         android:text="Log In"
+        android:textSize="18sp"
+        android:background="@drawable/button_bg"
         app:layout_constraintBottom_toTopOf="@+id/register"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"

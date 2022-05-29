@@ -43,7 +43,7 @@ public class ProfileActivity extends AppCompatActivity {
         mBackBtn = (Button) findViewById(R.id.backBtn);
         mNameTxt = (TextView) findViewById(R.id.nameTxt);
         mBioTxt = (TextView) findViewById(R.id.bioTxt);
-        mProfilePic = (ImageView) findViewById(R.id.profilePicChat);
+        mProfilePic = (ImageView) findViewById(R.id.profilePagePic);
         mProfileImg1 = (ImageView) findViewById(R.id.profilePageImg1);
         mProfileImg2 = (ImageView) findViewById(R.id.profilePageImg2);
 
@@ -79,41 +79,41 @@ public class ProfileActivity extends AppCompatActivity {
                     if(snapshot.child("gender").getValue() != null){
                         userGender = snapshot.child("gender").getValue().toString();
                     }
-//                    if(snapshot.child("profilePicUrl").getValue() != null){
-//                        profilePicUrl = snapshot.child("profilePicUrl").getValue().toString();
-//                        switch(profilePicUrl){
-//                            case "default":
-//                                Glide.with(getApplication()).load(R.drawable.default_icon).into(mProfilePic);
-//                                break;
-//                            default:
-//                                Glide.with(getApplication()).load(profilePicUrl).into(mProfilePic);
-//                                break;
-//                        }
-//
-//                    }
-//                    if(snapshot.child("profileImg1").getValue() != null){
-//                        profileImg1Url = snapshot.child("profileImg1").getValue().toString();
-//                        switch(profileImg1Url){
-//                            case "default":
-//                                Glide.with(getApplication()).load(R.drawable.default_icon).into(mProfileImg1);
-//                                break;
-//                            default:
-//                                Glide.with(getApplication()).load(profileImg1Url).into(mProfileImg1);
-//                                break;
-//                        }
-//
-//                    }
-//                    if(snapshot.child("profileImg2").getValue() != null){
-//                        profileImg2Url = snapshot.child("profileImg2").getValue().toString();
-//                        switch(profileImg2Url){
-//                            case "default":
-//                                Glide.with(getApplication()).load(R.drawable.default_icon).into(mProfileImg2);
-//                                break;
-//                            default:
-//                                Glide.with(getApplication()).load(profileImg2Url).into(mProfileImg2);
-//                                break;
-//                        }
-//                    }
+                    if(snapshot.child("profilePicUrl").getValue() != null){
+                        profilePicUrl = snapshot.child("profilePicUrl").getValue().toString();
+                        switch(profilePicUrl){
+                            case "default":
+                                Glide.with(getApplication()).load(R.drawable.default_icon).into(mProfilePic);
+                                break;
+                            default:
+                                Glide.with(getApplication()).load(profilePicUrl).into(mProfilePic);
+                                break;
+                        }
+
+                    }
+                    if(snapshot.child("profileImg1").getValue() != null){
+                        profileImg1Url = snapshot.child("profileImg1").getValue().toString();
+                        switch(profileImg1Url){
+                            case "default":
+                                Glide.with(getApplication()).load(R.drawable.default_icon).into(mProfileImg1);
+                                break;
+                            default:
+                                Glide.with(getApplication()).load(profileImg1Url).into(mProfileImg1);
+                                break;
+                        }
+
+                    }
+                    if(snapshot.child("profileImg2").getValue() != null){
+                        profileImg2Url = snapshot.child("profileImg2").getValue().toString();
+                        switch(profileImg2Url){
+                            case "default":
+                                Glide.with(getApplication()).load(R.drawable.default_icon).into(mProfileImg2);
+                                break;
+                            default:
+                                Glide.with(getApplication()).load(profileImg2Url).into(mProfileImg2);
+                                break;
+                        }
+                    }
                 }
             }
             @Override
